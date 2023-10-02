@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+ <head>
+
+  <title>
+   Computer Hardware Store
+  </title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="static/css/style.css" rel="stylesheet"/>
+ 
+</head>
+
+ <body>
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+   <a class="navbar-brand" href="#">
+    Computer Store
+   </a>
+   <button class="btn btn-primary ml-auto" id="toggleCartButton">
+    View Cart
+   </button>
+  </nav>
+  
+<div class="container mt-5" id="main">
+
+   <h1>
+    Computer Hardware Store
+   </h1>
+   <div class="row mt-4">
+    <div class="card">
+     <div class="card-header">
+      <h4>
+       Filter Products
+      </h4>
+     </div>
+     <div class="card-body" id="filterCard">
+      <div class="form-group">
+       <label for="productName">
+        Product Name:
+       </label>
+       <input class="form-control" id="productName" type="text"/>
+      </div>
+      <div class="form-group">
+       <label for="minPrice">
+        Minimum Price:
+       </label>
+       <input class="form-control" id="minPrice" type="number"/>
+      </div>
+      <div class="form-group">
+       <label for="maxPrice">
+        Maximum Price:
+       </label>
+       <input class="form-control" id="maxPrice" type="number"/>
+      </div>
+      <div class="form-group">
+       <label for="cfilter">
+        Category:
+       </label>
+       <select class="form-control" id="category">
+        <option value="">
+         All
+        </option>
+        <option value="Monitors">
+         Monitors
+        </option>
+        <option value="Graphics Cards">
+         Graphics Cards
+        </option>
+        <option value="Keyboards">
+         Keyboards
+        </option>
+        <option value="Mice">
+         Mice
+        </option>
+        <option value="Headphones">
+         Headphones
+        </option>
+        <option value="Storage">
+         Storage
+        </option>
+        <option value="Processors">
+         Processors
+        </option>
+       </select>
+      </div>
+      <button class="btn btn-primary" onclick="filterProducts()">
+       Apply Filters
+      </button>
+      <button class="btn btn-secondary" onclick="resetFilters()">
+       Reset Filters
+      </button>
+     </div>
+    </div>
+    <div class="col-md-9">
+     <h4>
+      Products
+     </h4>
+     <div id="productList">
+     </div>
+    </div>
+   </div>
+  </div>
+  
+<script src="home.js">
+  </script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js">
+  </script>
+  
+<div class="container mt-5" id="cart" style="display: none;">
+   <h1>
+    Your Cart
+   </h1>
+   <div class="cart-items" id="cartItems">
+   </div>
+   <button class="btn btn-success mt-3" id="checkoutButton">
+    Checkout
+   </button>
+   <div class="ml-3" id="balanceDisplay" style="display: none;">
+    <span class="mr-2">
+     Balance:
+    </span>
+    <span class="font-weight-bold" id="balanceAmount">
+     $1200
+    </span>
+   </div>
+  </div>
+ 
+</body>
+</html>
